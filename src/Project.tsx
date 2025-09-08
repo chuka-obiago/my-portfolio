@@ -4,6 +4,7 @@ import { SiPython, SiReact, SiTensorflow, SiTableau, SiJavascript, SiMongodb } f
 import { FaBraille } from "react-icons/fa";
 import SentimentImage from './assets/img/sentiment_analysis_thumbnail.png';
 import PortfolioThumbnail from './assets/img/portfolio_thumbnail.png';
+import Dashboard1 from './assets/img/mavenproject_dashboard-front.png';
 
 interface Project {
   id: number;
@@ -49,11 +50,12 @@ const Project: React.FC = () => {
       technologies: ["React", "JavaScript", "MongoDB", "Node.js"],
       githubUrl: "#",
       liveUrl: "#",
-      date: "Web Development"
+      date: "Web Development",
+      featured: true
     },
     {
       id: 3,
-      title: "Sales Performance Analytics",
+      title: "Predictive Maintenance Model",
       description: "Comprehensive data analysis of sales performance across multiple regions with interactive Tableau dashboards.",
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=350&fit=crop",
       category: "ML/AI",
@@ -74,14 +76,13 @@ const Project: React.FC = () => {
     },
     {
       id: 5,
-      title: "Predictive Maintenance Model",
+      title: "Dashboard for Company",
       description: "Machine learning model to predict equipment failures before they occur, reducing downtime by 40%.",
-      image: "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=600&h=450&fit=crop",
+      image: Dashboard1,
       category: "Data Analysis",
       technologies: ["Python", "Scikit-learn", "TensorFlow", "AWS"],
       githubUrl: "#",
       date: "Data Analysis",
-      featured: true
     },
     {
       id: 6,
@@ -144,10 +145,10 @@ const Project: React.FC = () => {
         {/* Header */}
         <div className={`text-center mb-12 transition-all duration-1000 ease-out transform ${hasScrolledIn ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h2 className="text-5xl md:text-6xl font-extrabold text-gray-900 mb-8">
-            My Projects
-          </h2>
+            MY PROJECTS
+          </h2>   
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            A showcase of my work in machine learning, web development, and data analysis
+            A showcase of my works in machine learning, web development, and data analysis
           </p>
         </div>
 
@@ -159,8 +160,8 @@ const Project: React.FC = () => {
               onClick={() => setActiveFilter(category)}
               className={`px-6 py-2 rounded-full font-medium transition-all duration-300 transform hover:scale-105 ${
                 activeFilter === category
-                  ? 'bg-blue-600 text-white shadow-lg'
-                  : 'bg-white text-gray-600 hover:bg-gray-100 shadow-md'
+                  ? 'bg-gray-800 text-white shadow-lg'
+                  : 'bg-white text-gray-600 hover:bg-gray-100 shadow-md hover:cursor-pointer'
               }`}
             >
               {category}

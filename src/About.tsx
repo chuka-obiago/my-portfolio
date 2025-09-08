@@ -52,7 +52,7 @@ export default function About() {
             className={`text-5xl md:text-6xl text-center font-extrabold mb-6 transition-all duration-1500 ease-out
           ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
           >
-            About Me
+            ABOUT ME
           </h2>
           <div
             className={`bg-[#e1e0d7] backdrop-blur-sm p-8 rounded-2xl shadow-l transition-all duration-1500 ease-out delay-200

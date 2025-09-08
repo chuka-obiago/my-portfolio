@@ -6,6 +6,9 @@ import Cta from './components/Cta';
 import About from './About';
 import Skills from './components/Skills';
 import Project from './Project';
+import Services from './Services';
+import Parallax from './Parallax';
+import ParallaxImages from './ParallaxImages';
 
 
 export default function Home() {
@@ -22,7 +25,7 @@ export default function Home() {
     const handleScroll = () => {
       const scrollY = window.scrollY;
       const maxScroll = 500; // how far to scroll before max darkness
-      const newOpacity = Math.min(0.8, 0.65 + scrollY / maxScroll); 
+      const newOpacity = Math.min(0.65, 0.65 + scrollY / maxScroll); 
       setOpacity(newOpacity);
     };
 
@@ -75,7 +78,12 @@ export default function Home() {
         </div>
 
         {/* Blinking arrow down icon */}
-        <div className="absolute bottom-8 z-10 animate-blink-arrow">
+        <div  
+        onClick={() =>
+        document.getElementById("about")?.scrollIntoView({ behavior: "smooth" })
+        }
+        className="absolute bottom-8 z-10 animate-blink-arrow hover:cursor-pointer"
+        >
           <svg
             className="w-10 h-10 md:w-12 md:h-12 text-white "
             fill="none"
@@ -95,7 +103,7 @@ export default function Home() {
 
 
       {/* Sections for navigation */} 
-       <section className="bg-[#d9d7cb]">
+      <section className="bg-[#d9d7cb]">
         <About /> 
         <Skills />
       </section>  
@@ -104,15 +112,21 @@ export default function Home() {
         <Project />
       </section>
 
-      <section id="services" className="w-full h-screen bg-[#211e1f] bg-opacity-90 flex items-center justify-center text-white text-4xl p-8 z-10 rounded-lg">
-        <p>My SERVICES are available!</p>
+      <section id="services" className="bg-[#211e1f]">
+        <Services />
       </section>
 
-      <section id="products" className="w-full h-screen bg-[#d9d7cb] bg-opacity-90 flex items-center justify-center text-dark text-4xl p-8 z-10 rounded-lg">
-        <p>COMING SOON!</p>
+      <ParallaxImages />
+
+      <section id="products" className="w-full h-screen bg-[#211e1f] bg-opacity-90 flex items-center justify-center text-white text-4xl p-8 z-10 rounded-lg">
+        <p>Products!</p>
       </section>
 
-      <section id="contact" className="w-full h-screen bg-gray-900 bg-opacity-90 flex items-center justify-center text-white text-4xl p-8 z-10 rounded-lg">
+      <section id="products" className="">
+        <Parallax />
+      </section>
+
+      <section id="contact" className="w-full h-screen bg-[#A9A9A9] bg-opacity-90 flex items-center justify-center text-white text-4xl p-8 z-10 rounded-lg">
         <p>Get in CONTACT with me!</p>
       </section>
 
