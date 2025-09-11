@@ -8,7 +8,9 @@ import Skills from './components/Skills';
 import Project from './Project';
 import Services from './Services';
 import Parallax from './Parallax';
-import ParallaxImages from './ParallaxImages';
+// import ParallaxImages from './ParallaxImages';
+import Testimonials from './Testimonials';
+import Products from './Products';
 
 
 export default function Home() {
@@ -110,19 +112,26 @@ export default function Home() {
 
       <section id="projects" className="bg-[#d9d7cb]">
         <Project />
+
+        {/* CTA */}
+        <div className="justify-center text-center text-gray-900 text-2xl md:text-3xl lg:text-4xl font-medium drop-shadow-md pb-25 flex flex-col md:flex-row md:gap-4 items-center gap-3">
+          <span>Have a project in mind?</span>
+          <Cta className="text-gray-900 bg-gray-100" targetId="contact">GET IN TOUCH</Cta>
+        </div>
+
       </section>
 
       <section id="services" className="bg-[#211e1f]">
         <Services />
       </section>
 
-      <ParallaxImages />
+      <Testimonials />
 
-      <section id="products" className="w-full h-screen bg-[#211e1f] bg-opacity-90 flex items-center justify-center text-white text-4xl p-8 z-10 rounded-lg">
-        <p>Products!</p>
+      <section id="products" className="bg-[#211e1f]">
+        <Products />
       </section>
 
-      <section id="products" className="">
+      <section id="" className="">
         <Parallax />
       </section>
 

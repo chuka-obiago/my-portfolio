@@ -3,18 +3,18 @@ import { useState, useEffect, useRef } from 'react';
 // Sample data for images
 const parallaxImages = {
   column1: [
-    'https://placehold.co/400x600/1e293b/d1d5db?text=Image+1',
-    'https://placehold.co/400x450/1e293b/d1d5db?text=Image+2',
-    'https://placehold.co/400x450/1e293b/d1d5db?text=Image+2',
+    'https://placehold.co/400x600/1f2937/d1d5db?text=Data',
+    'https://placehold.co/400x450/374151/d1d5db?text=AI',
+    'https://placehold.co/400x600/374151/d1d5db?text=Analysis',
   ],
   column2: [
-    'https://placehold.co/400x450/374151/d1d5db?text=Image+4',
-    'https://placehold.co/400x600/374151/d1d5db?text=Image+5',
-    'https://placehold.co/400x500/374151/d1d5db?text=Image+6',
+    'https://placehold.co/400x450/374151/d1d5db?text=2025',
+    'https://placehold.co/400x450/374151/d1d5db?text=Pipeline',
+    'https://placehold.co/400x500/374151/d1d5db?text=Automation',
     'https://placehold.co/400x500/374151/d1d5db?text=Image+6',
   ],
   column3: [
-    'https://placehold.co/400x550/1f2937/d1d5db?text=Image+7',
+    'https://plus.unsplash.com/premium_photo-1683120974913-1ef17fdec2a8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDd8fHRlY2hub2xvZ3l8ZW58MHx8MHx8fDA%3D',
     'https://placehold.co/400x600/1f2937/d1d5db?text=Image+8',
     'https://placehold.co/400x450/1e293b/d1d5db?text=Image+9',
   ],
@@ -51,7 +51,7 @@ const ParallaxImages = () => {
 <div
   className="flex flex-col gap-4 md:gap-6"
   style={{
-    // Start scrolled up so Image 2 is visible, Image 1 is slightly above
+    // Start scrolled up so Card 2 is visible, Card 1 is slightly above
     transform: `translateY(calc(-0% + ${scrollY * parallaxFactorUp}px))`,
   }}
 >
@@ -104,3 +104,4 @@ const ParallaxImages = () => {
 };
 
 export default ParallaxImages;
+  

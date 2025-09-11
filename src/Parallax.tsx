@@ -12,8 +12,8 @@ export default function Parallax() {
 
   // Different transform speeds for parallax
   const ySlow = useTransform(scrollYProgress, [0, 1], [0, 500]);   // slow
-  const yMedium = useTransform(scrollYProgress, [0, 1], [0, 300]); // medium
-  const yFast = useTransform(scrollYProgress, [0, 1], [0, 200]);   // fast
+  const yMedium = useTransform(scrollYProgress, [0, 1], [0, 700]); // medium
+  const yFast = useTransform(scrollYProgress, [0, 1], [0, 100]);   // fast
 
   return (
     <section

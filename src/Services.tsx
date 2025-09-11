@@ -24,7 +24,7 @@ const ServiceItem = ({ title, description, icon }: ServiceCardProps) => {
           {/* Icon + Title wrapper for scaling */}
           <div className="flex items-center px-3 space-x-4 transform transition-transform duration-300 group-hover:scale-110">
             <div className="text-white">{icon}</div>
-            <h3 className="text-xl md:text-2xl font-bold text-white transition-colors duration-300 group-hover:text-gray-200">
+            <h3 className="text-xl md:text-2xl font-bold text-white transition-colors duration-300 group-hover:text-gray-200 ">
               {title}
             </h3>
           </div>
@@ -61,7 +61,17 @@ const ServiceItem = ({ title, description, icon }: ServiceCardProps) => {
         className={`overflow-hidden transition-all duration-300 ease-in-out
                     ${isOpen ? 'max-h-[1000px] opacity-100 mt-4' : 'max-h-0 opacity-0'}`}
       >
-        <p className="text-lg text-gray-400">{description}</p>
+        <p className="text-lg text-gray-400 whitespace-pre-line">{description}
+
+        <button
+        onClick={() =>
+        document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
+        className="text-gray-100 cursor-pointer underline"
+        >
+          Get in touch
+        </button>
+
+        </p>
       </div>
     </div>
   );
@@ -92,21 +102,60 @@ export default function Services() {
 
   const servicesData = [
     {
-      title: 'ML Solutions',
+      title: 'AI Solutions',
       description:
-        'Build, deploy, and optimize custom machine learning models to solve complex business problems, from predictive analytics to natural language processing. I specialize in turning raw data into actionable intelligence that drives results.',
+        `Helping businesses automate tasks, improve efficiency, and unlock new opportunities for growth. From smarter decision-making to enhanced customer experiences, AI can give your business the edge it needs.
+
+        What you get:
+        ● Custom AI models tailored to your business needs 
+
+        ● Intelligent chatbots and virtual assistants to boost customer support  
+
+        ● Predictive analytics for smarter forecasting 
+
+        ● Natural language processing for text and sentiment analysis  
+
+        ● Automation tools that save time and cut costs  
+
+        Ready to harness the power of AI to transform your business? `,
       icon: <PiGraphDuotone className="h-8 w-8 text-white" />,
     },
     {
       title: 'Web Development',
-      description:
-        'Craft modern, responsive, and high-performance web applications tailored to your specific needs, using the latest front-end and back-end technologies. I focus on creating intuitive user experiences that are both beautiful and functional.',
+      description: 
+        `I design and develop modern, responsive websites that not only look good but also attracts, engages and converts visitors to customers.
+
+        What you get:
+        ● Fast and responsive websites
+
+        ● Clean, professional, and custom designs tailored to your brand
+
+        ● Secure and scalable solutions 
+
+        ● SEO optimization for better online visibility
+
+        ● Ongoing support and updates as your business evolves
+
+        Ready for a website that positions your business for growth? `,
       icon: <FaCode className="h-8 w-8 text-white" />,
     },
     {
       title: 'Data Analysis',
       description:
-        'Extract actionable insights from raw data, create interactive dashboards, and drive data-informed decisions with comprehensive statistical analysis and visualization. My goal is to transform complex datasets into clear, compelling narratives.',
+        `I help turn data into decisions that drive growth. With the right analysis, your raw numbers become a powerful tool for success.
+
+        What you get:
+        ● Actionable dashboards and reports tailored to your business
+
+        ● In-depth trend and performance analysis
+
+        ● Fast, accurate data cleaning and preprocessing
+
+        ● Insights that reduce guesswork and improve decision-making
+
+        ● Recommendations backed by data, not assumptions
+
+        Ready to transform your data into a competitive advantage? `,
       icon: <BsClipboardData className="h-8 w-8 text-white" />,
     },
   ];
