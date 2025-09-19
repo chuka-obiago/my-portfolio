@@ -7,10 +7,11 @@ import About from './About';
 import Skills from './components/Skills';
 import Project from './Project';
 import Services from './Services';
-import Parallax from './Parallax';
-// import ParallaxImages from './ParallaxImages';
 import Testimonials from './Testimonials';
 import Products from './Products';
+import Contact from './Contact';
+import Footer from './Footer';
+
 
 
 export default function Home() {
@@ -42,7 +43,6 @@ export default function Home() {
     
     // Main Container
     <div className="relative w-screen min-h-screen font-sans overflow-x-hidden">
-
       <Navbar />
 
       {/* Hero Section: Contains bg-image, name, and title */}
@@ -63,7 +63,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-black  z-0 rounded-lg" style={{ opacity }}></div>
 
         {/* Content for the main screen (Name, Title) */}
-        <div className="relative z-10 flex flex-col items-center justify-center h-full text-center p-4 rounded-lg">
+        <div className="relative z-10 flex flex-col items-center justify-center h-full text-center p-4 ">
           {/* Name */}
           <h1 className="text-6xl md:text-8xl lg:text-8xl font-extrabold mb-4 animate-fade-in drop-shadow-lg leading-tight">
             CHUKWUKA OBIAGO
@@ -131,14 +131,11 @@ export default function Home() {
         <Products />
       </section>
 
-      <section id="" className="">
-        <Parallax />
+      <section id="contact" className="bg-[#d9d7cb]">
+        <Contact />
       </section>
 
-      <section id="contact" className="w-full h-screen bg-[#A9A9A9] bg-opacity-90 flex items-center justify-center text-white text-4xl p-8 z-10 rounded-lg">
-        <p>Get in CONTACT with me!</p>
-      </section>
-
+      <Footer/>
 
 
       {/* CSS for animations and custom styles */}

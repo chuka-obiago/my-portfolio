@@ -4,7 +4,7 @@ import { SiPython, SiReact, SiTensorflow, SiTableau, SiJavascript, SiMongodb } f
 import { FaBraille } from "react-icons/fa";
 import SentimentImage from './assets/img/sentiment_analysis_thumbnail.png';
 import PortfolioThumbnail from './assets/img/portfolio_thumbnail.png';
-import Dashboard1 from './assets/img/mavenproject_dashboard-front.png';
+import ElearnMockup from './assets/img/elearn-mockup.png';
 
 interface Project {
   id: number;
@@ -15,6 +15,7 @@ interface Project {
   technologies: string[];
   githubUrl?: string;
   liveUrl?: string;
+  live?: string;
   date: string;
   featured?: boolean;
 }
@@ -25,14 +26,14 @@ const Project: React.FC = () => {
   const [hasScrolledIn, setHasScrolledIn] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
 
-  const categories = ["All", "ML/AI", "Web Development", "Data Analysis"];
+  const categories = ["All", "ML/AI", "Web Development"];
 
   // Projects data
   const projects: Project[] = [
     {
       id: 1,
       title: "AI-Powered Customer Sentiment Analysis",
-      description: "Built a machine learning model to analyze customer feedback sentiment using NLP techniques. Achieved 94% accuracy in sentiment classification with real-time processing capabilities.",
+      description: "Machine Learning model utilizing BERT capable of aspect-based sentiment analysis with 93% accuracy, able to process thousands of customer feedback to uncover key trends and pain points, enabling better decision making.",
       image: SentimentImage,
       category: "ML/AI",
       technologies: [""],
@@ -43,58 +44,60 @@ const Project: React.FC = () => {
     },
     {
       id: 2,
-      title: "E-commerce Dashboard",
-      description: "Responsive web dashboard for e-commerce analytics with real-time data visualization and inventory management.",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=300&fit=crop",
-      category: "Web Development",
-      technologies: ["React", "JavaScript", "MongoDB", "Node.js"],
-      githubUrl: "#",
-      liveUrl: "#",
-      date: "Web Development",
-      featured: true
-    },
-    {
-      id: 3,
-      title: "Predictive Maintenance Model",
-      description: "Comprehensive data analysis of sales performance across multiple regions with interactive Tableau dashboards.",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=350&fit=crop",
-      category: "ML/AI",
-      technologies: ["Python", "Tableau", "SQL", "Pandas"],
-      githubUrl: "#",
-      date: "ML/ AI"
-    },
-    {
-      id: 4,
       title: "Portfolio Website",
-      description: "Modern, responsive portfolio website built with React and TypeScript featuring smooth animations and clean design.",
+      description: "Modern portfolio built using React with a clean, modern UI and smooth navigation to showcase projects and skills while delivering a fast and engaging user experience. \n. \n.",
       image: PortfolioThumbnail,
       category: "Web Development",
-      technologies: ["React", "TypeScript", "Tailwind", "Framer Motion"],
-      githubUrl: "#",
-      liveUrl: "#",
+      technologies: [""],
+      // liveUrl: "#",
+      live: "#",
       date: "Web Development"
     },
     {
-      id: 5,
-      title: "Dashboard for Company",
-      description: "Machine learning model to predict equipment failures before they occur, reducing downtime by 40%.",
-      image: Dashboard1,
-      category: "Data Analysis",
-      technologies: ["Python", "Scikit-learn", "TensorFlow", "AWS"],
-      githubUrl: "#",
-      date: "Data Analysis",
+      id: 3,
+      title: "E-learning Platform",
+      description: "React application offering streamlined interface with interactive course delivery to keep users engaged. Along with intuitive navigation  to reduce friction and improve overall learning experience \n. \n.",
+      image: ElearnMockup,
+      category: "Web Development",
+      technologies: [""],
+      githubUrl: "https://github.com/chuka-obiago/E-learning",
+      liveUrl: "https://e-learning-sage-eight.vercel.app/",
+      date: "Web Development"
     },
-    {
-      id: 6,
-      title: "Financial Data Visualization",
-      description: "Interactive dashboard analyzing stock market trends and financial metrics with advanced charting capabilities.",
-      image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&h=300&fit=crop",
-      category: "Data Analysis",
-      technologies: ["Python", "Plotly", "Pandas", "Yahoo Finance API"],
-      githubUrl: "#",
-      liveUrl: "#",
-      date: "Data Analysis"
-    }
+    
+    // {
+    //   id: 2,
+    //   title: "E-commerce Dashboard",
+    //   description: "Responsive web dashboard for e-commerce analytics with real-time data visualization and inventory management.",
+    //   image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=300&fit=crop",
+    //   category: "Web Development",
+    //   technologies: ["React", "JavaScript", "MongoDB", "Node.js"],
+    //   githubUrl: "#",
+    //   liveUrl: "#",
+    //   date: "Web Development",
+    //   featured: true
+    // },
+    // {
+    //   id: 5,
+    //   title: "Dashboard for Company",
+    //   description: "Machine learning model to predict equipment failures before they occur, reducing downtime by 40%.",
+    //   image: Dashboard1,
+    //   category: "Data Analysis",
+    //   technologies: ["Python", "Scikit-learn", "TensorFlow", "AWS"],
+    //   githubUrl: "#",
+    //   date: "Data Analysis",
+    // },
+    // {
+    //   id: 6,
+    //   title: "Financial Data Visualization",
+    //   description: "Interactive dashboard analyzing stock market trends and financial metrics with advanced charting capabilities.",
+    //   image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&h=300&fit=crop",
+    //   category: "Data Analysis",
+    //   technologies: ["Python", "Plotly", "Pandas", "Yahoo Finance API"],
+    //   githubUrl: "#",
+    //   liveUrl: "#",
+    //   date: "Data Analysis"
+    // }
   ];
 
   // Technology icon
@@ -148,7 +151,7 @@ const Project: React.FC = () => {
             MY PROJECTS
           </h2>   
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            A showcase of my works in machine learning, web development, and data analysis
+            A showcase of my works in machine learning, AI, and web development.
           </p>
         </div>
 
@@ -200,7 +203,7 @@ const Project: React.FC = () => {
                 <h3 className="text-xl font-bold text-gray-900 mb-3">
                   {project.title}
                 </h3>
-                <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                <p className="text-gray-600 text-sm leading-relaxed whitespace-pre-line mb-4">
                   {project.description}
                 </p>
 
@@ -218,10 +221,12 @@ const Project: React.FC = () => {
                 </div>
 
                 {/* Action Buttons */}
-                <div className="flex gap-3">
+                <div className="flex gap-3 mt-auto ">
                   {project.githubUrl && (
                     <a
                       href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors duration-300"
                     >
                       <FiGithub className="w-4 h-4" />
@@ -231,6 +236,17 @@ const Project: React.FC = () => {
                   {project.liveUrl && (
                     <a
                       href={project.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 text-blue-600 hover:text-blue-800 transition-colors duration-300"
+                    >
+                      <FiExternalLink className="w-4 h-4" />
+                      <span className="text-sm font-medium">Live Demo</span>
+                    </a>
+                  )}
+                  {project.live && (
+                    <a
+                      href={project.live}
                       className="flex items-center gap-2 text-blue-600 hover:text-blue-800 transition-colors duration-300"
                     >
                       <FiExternalLink className="w-4 h-4" />
