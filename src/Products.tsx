@@ -163,7 +163,7 @@ const Products: React.FC = () => {
           Notify Me
         </button>
       </form>
-      {/* <a href="/thankyou">Go to Thank You Page</a> */}
+      <a href="/thankyou">Go to Thank You Page</a>
     </section>
   );
 };
