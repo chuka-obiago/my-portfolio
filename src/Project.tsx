@@ -2,8 +2,8 @@ import React, { useState, useRef, useEffect } from 'react';
 import { FiGithub, FiExternalLink } from 'react-icons/fi';
 import { SiPython, SiReact, SiTensorflow, SiTableau, SiJavascript, SiMongodb } from 'react-icons/si';
 import { FaBraille } from "react-icons/fa";
-import SentimentImage from './assets/img/sentiment_analysis_thumbnail.png';
-import PortfolioThumbnail from './assets/img/portfolio_thumbnail.png';
+import SentimentImage from './assets/img/sa_thumbnail.png';
+import PortfolioThumbnail from './assets/img/sentiment_analysis_thubmnail_image.png';
 import ElearnMockup from './assets/img/elearn-mockup.png';
 
 interface Project {
