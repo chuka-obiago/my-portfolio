@@ -86,7 +86,7 @@ const Navbar: React.FC = () => {
     <>
       {/* Desktop Navbar */}
       <nav className={`fixed top-0 left-0 right-0 z-40 w-full flex justify-center py-4 transition-all duration-500
-                      ${isHidden ? 'opacity-0' : 'opacity-100'}
+                      ${isHidden ? '-translate-y-full' : 'translate-y-0'}
                       ${isGlassy ? 'bg-black/15 backdrop-blur-md shadow-lg' : 'bg-transparent'}`}>
         <div className="w-4/5 max-w-7xl mx-auto flex items-center justify-between">
           {/* Desktop Left Categories - Hidden on mobile */}
