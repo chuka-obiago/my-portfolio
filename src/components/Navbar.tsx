@@ -163,10 +163,10 @@ const Navbar: React.FC = () => {
             <img
               src={CoLogo}
               alt="Logo"
-              className="h-8 w-auto object-contain"
+              className="h-8 w-auto object-contain z-50"
             />
             <button
-              className="text-white hover:text-purple-300 transition-colors duration-300"
+              className="text-white hover:text-purple-300 transition-colors duration-300 z-50"
               onClick={toggleMobileMenu}
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">

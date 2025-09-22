@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import LoadingScreen from './components/LoadingScreen';
-import bgImage from './assets/img/_GN_6680.jpg'; 
 import Navbar from '../src/components/Navbar';
 import Cta from './components/Cta';
 import About from './About';
@@ -12,7 +11,7 @@ import Products from './Products';
 import Contact from './Contact';
 import Footer from './Footer';
 
-
+const bgImage = '/black_suit_bg.jpg';
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -60,7 +59,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-image-layer bg-center lg:bg-top"></div>
 
         {/* Overlay for better text readability */}
-        <div className="absolute inset-0 bg-black  z-0 rounded-lg" style={{ opacity }}></div>
+        <div className="absolute inset-0 bg-black  z-0 " style={{ opacity }}></div>
 
         {/* Content for the main screen (Name, Title) */}
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-center p-4 ">
