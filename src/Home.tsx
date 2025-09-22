@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import './Home.css';
 import LoadingScreen from './components/LoadingScreen';
 import Navbar from '../src/components/Navbar';
 import Cta from './components/Cta';
@@ -46,13 +47,11 @@ export default function Home() {
 
       {/* Hero Section: Contains bg-image, name, and title */}
       <div
-        className="relative h-screen w-full flex flex-col items-center justify-center text-white overflow-hidden"
+        className="hero-section relative h-screen w-full flex flex-col items-center justify-center text-white overflow-hidden"
         style={{
           backgroundImage: `url(${bgImage})`,
           backgroundSize: 'cover',
-          // Default background position for smaller screens
           backgroundPosition: 'center top 25%',
-          backgroundAttachment: 'fixed',
         }}
       >
   
@@ -113,7 +112,7 @@ export default function Home() {
         <Project />
 
         {/* CTA */}
-        <div className="justify-center text-center text-gray-900 text-2xl md:text-3xl lg:text-4xl font-medium drop-shadow-md pb-25 flex flex-col md:flex-row md:gap-4 items-center gap-3">
+        <div className="justify-center text-center text-gray-900 text-xl md:text-3xl lg:text-4xl font-medium drop-shadow-md pb-25 flex flex-col md:flex-row md:gap-4 items-center gap-3">
           <span>Have a project in mind?</span>
           <Cta className="text-gray-900 bg-gray-100" targetId="contact">GET IN TOUCH</Cta>
         </div>
@@ -152,6 +151,7 @@ export default function Home() {
           /* Apply bg-top for large screens to the background image. */
           /* If you remove the inline style, you can use bg-top directly as a Tailwind class. */
         }
+
 
         @keyframes fadeIn {
           from { opacity: 0; transform: translateY(-20px); }

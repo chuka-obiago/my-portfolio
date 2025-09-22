@@ -121,13 +121,13 @@ const Contact = () => {
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         }`}
       >
-        <h1 className="text-5xl md:text-6xl font-bold text-center text-gray-900 mb-12">
+        <h1 className="text-4xl md:text-6xl font-bold text-center text-gray-900 mb-12">
           GET IN TOUCH
         </h1>
 
         <div className="flex justify-center">
           <div className="w-full max-w-lg p-8 bg-white rounded-xl shadow-lg border border-gray-200">
-            <h2 className="text-3xl font-semibold text-gray-900 mb-6 text-center">
+            <h2 className="text-2xl font-semibold text-gray-900 mb-6 text-center">
               Send a message
             </h2>
             <form onSubmit={handleSubmit} className="space-y-6">

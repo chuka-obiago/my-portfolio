@@ -147,7 +147,7 @@ const Project: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Project Section Header */}
         <div className={`text-center mb-12 transition-all duration-1000 ease-out transform ${hasScrolledIn ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <h2 className="text-5xl md:text-6xl font-extrabold text-gray-900 mb-8">
+          <h2 className="text-4xl md:text-6xl font-extrabold text-gray-900 mb-8">
             MY PROJECTS
           </h2>   
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">

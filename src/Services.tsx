@@ -24,7 +24,7 @@ const ServiceItem = ({ title, description, icon }: ServiceCardProps) => {
           {/* Icon + Title wrapper for scaling */}
           <div className="flex items-center px-3 space-x-4 transform transition-transform duration-300 group-hover:scale-110">
             <div className="text-white">{icon}</div>
-            <h3 className="text-xl md:text-2xl font-bold text-white transition-colors duration-300 group-hover:text-gray-200 ">
+            <h3 className="text-lg md:text-2xl font-bold text-white transition-colors duration-300 group-hover:text-gray-200 ">
               {title}
             </h3>
           </div>
@@ -61,7 +61,7 @@ const ServiceItem = ({ title, description, icon }: ServiceCardProps) => {
         className={`overflow-hidden transition-all duration-300 ease-in-out
                     ${isOpen ? 'max-h-[1000px] opacity-100 mt-4' : 'max-h-0 opacity-0'}`}
       >
-        <p className="text-lg text-gray-400 whitespace-pre-line">{description}
+        <p className="text-md text-gray-400 whitespace-pre-line">{description}
 
         <button
         onClick={() =>
@@ -189,7 +189,7 @@ export default function Services() {
       `}</style>
 
       <div className="container mx-auto max-w-4xl">
-        <h2 className="text-center text-5xl md:text-6xl font-extrabold mb-4 uppercase tracking-widest text-white">
+        <h2 className="text-center text-4xl md:text-6xl font-extrabold mb-4 uppercase tracking-widest text-white">
           <span className="sr-only">SERVICES</span>
           <div
             key={isTitleVisible ? 'visible' : 'hidden'}

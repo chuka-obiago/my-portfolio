@@ -34,7 +34,7 @@ export default function Cta({ children = 'SCHEDULE A CALL', onClick, className =
     <button
       onClick={handleClick} // Use the new handleClick function
       className={`relative inline-flex items-center justify-center px-8 py-3 overflow-hidden
-                  rounded-full bg-[#d9d7cb] text-black font-semibold text-lg
+                  rounded-full bg-[#d9d7cb] text-black font-semibold text-md md:text-xl
                   group transition-all duration-300 ease-in-out cursor-pointer border-none
                   ${className}`} // Allows for additional custom classes
     >

@@ -76,7 +76,7 @@ const Products: React.FC = () => {
       {/* Title */}
       <h2
         ref={titleRef}
-        className="relative z-20 pt-15 text-5xl md:text-6xl font-extrabold uppercase tracking-widest text-white"
+        className="relative z-20 pt-15 text-4xl md:text-6xl font-extrabold uppercase tracking-widest text-white"
       >
         <span className="sr-only">PRODUCTS</span>
         <div

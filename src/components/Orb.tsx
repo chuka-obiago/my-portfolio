@@ -2,7 +2,7 @@
 export default function Orb() {
   return (
     <div className="flex items-center justify-center p-4">
-      <div className="relative w-48 h-48 md:w-64 md:h-64 rounded-full flex items-center justify-center
+      <div className="relative w-40 h-40 md:w-64 md:h-64 rounded-full flex items-center justify-center
                       bg-gradient-to-br from-gray-600 to-indigo-700
                       shadow-2xl overflow-hidden 
                       transition-all duration-500 ease-in-out

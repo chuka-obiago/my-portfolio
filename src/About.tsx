@@ -49,7 +49,7 @@ export default function About() {
         {/* Right - Text */}
         <div className="flex flex-col justify-center text-center md:text-left">
           <h2
-            className={`text-5xl md:text-6xl text-center font-extrabold mb-6 transition-all duration-1500 ease-out
+            className={`text-4xl md:text-6xl text-center font-extrabold mb-6 transition-all duration-1500 ease-out
           ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
           >
             ABOUT ME
@@ -58,7 +58,7 @@ export default function About() {
             className={`bg-[#e1e0d7] backdrop-blur-sm p-8 rounded-2xl shadow-l transition-all duration-1500 ease-out delay-200
           ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
           >
-            <p className="text-lg md:text-2xl leading-relaxed mb-4">
+            <p className="text-md md:text-2xl leading-relaxed mb-4">
               I help businesses leverage machine learning models, uncover data-driven insights, and create responsive websites using modern web technologies. By combining advanced analytics, predictive modeling, AI and intuitive design, I deliver solutions that drive real impact.
             </p>
           </div>

@@ -1,0 +1,11 @@
+/* Default: larger screens use fixed for parallax */
+.hero-section {
+  background-attachment: fixed;
+}
+
+/* Mobile override: force scroll for better performance */
+@media (max-width: 767px) {
+  .hero-section {
+    background-attachment: scroll;
+  }
+}
